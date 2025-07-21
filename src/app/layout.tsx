@@ -2,19 +2,79 @@ import "./globals.css";
 
 import { Provider } from "@itsatoshi/components/theme/provider";
 import type { Metadata } from "next";
-import { Sora, Zen_Maru_Gothic } from "next/font/google";
+import localFont from "next/font/local";
 
-const zenMaruGothic = Zen_Maru_Gothic({
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin"],
+const zenMaruGothic = localFont({
+  src: [
+    {
+      path: "../../public/fonts/ZenMaruGothic-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/ZenMaruGothic-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/ZenMaruGothic-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/ZenMaruGothic-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
   variable: "--font-zen-maru-gothic",
   display: "swap",
   preload: true,
 });
 
-const sora = Sora({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-  subsets: ["latin"],
+const sora = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Sora-Thin.ttf",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Sora-ExtraLight.ttf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Sora-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Sora-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Sora-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Sora-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Sora-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Sora-ExtraBold.ttf",
+      weight: "800",
+      style: "normal",
+    },
+  ],
   variable: "--font-sora",
   display: "swap",
   preload: true,
