@@ -1,15 +1,23 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+import { Provider } from "@itsatoshi/components/theme/provider";
+import type { Metadata } from "next";
+import { Sora, Zen_Maru_Gothic } from "next/font/google";
+
+const zenMaruGothic = Zen_Maru_Gothic({
+  weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
+  variable: "--font-zen-maru-gothic",
+  display: "swap",
+  preload: true,
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const sora = Sora({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
   subsets: ["latin"],
+  variable: "--font-sora",
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -23,9 +31,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${zenMaruGothic.variable} ${sora.variable}`}
+    >
+      <body>
+        <Provider>{children}</Provider>
       </body>
     </html>
   );
