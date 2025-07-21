@@ -11,12 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { AvatarSticker } from "@itsatoshi/components/avatar-sticker";
 import NextLink from "next/link";
-import {
-  FaEnvelope,
-  FaGithub,
-  FaLinkedin,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 export type FooterProps = {
   brandName?: string;
@@ -49,7 +44,7 @@ export function Footer({
       href: githubUrl,
     },
     {
-      name: "LinkedIn", 
+      name: "LinkedIn",
       icon: FaLinkedin,
       href: linkedinUrl,
     },
@@ -115,26 +110,28 @@ export function Footer({
                 left: 0,
                 right: 0,
                 bottom: 0,
-                background: "repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,0.1) 2px, rgba(255,255,255,0.1) 4px)",
+                background:
+                  "repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,0.1) 2px, rgba(255,255,255,0.1) 4px)",
                 borderRadius: "lg",
                 pointerEvents: "none",
               }}
-              _hover={{
-                transform: "rotate(-1deg) translateY(-2px)",
-                transition: "all 0.3s ease",
-              }}
             >
-              <Flex direction="column" gap={4} align={{ base: "center", md: "flex-start" }}>
+              <Flex
+                direction="column"
+                gap={4}
+                align={{ base: "center", md: "flex-start" }}
+              >
                 <Flex
                   align="center"
                   gap={3}
                   direction={{ base: "column", sm: "row" }}
                 >
-                  <AvatarSticker 
-                    width="50px" 
-                    height="50px" 
+                  <AvatarSticker
+                    width="50px"
+                    height="50px"
                     imageSizes="50px"
                     borderWidth="3px"
+                    rotation="-3deg"
                   />
                   <Text
                     fontSize="xl"
@@ -153,7 +150,7 @@ export function Footer({
                   maxW="300px"
                   lineHeight="1.6"
                 >
-                  Building digital experiences with passion and precision. 
+                  Building digital experiences with passion and precision.
                   Welcome to my corner of the internet.
                 </Text>
               </Flex>
@@ -174,16 +171,17 @@ export function Footer({
                 left: 0,
                 right: 0,
                 bottom: 0,
-                background: "repeating-linear-gradient(-45deg, transparent, transparent 2px, rgba(255,255,255,0.1) 2px, rgba(255,255,255,0.1) 4px)",
+                background:
+                  "repeating-linear-gradient(-45deg, transparent, transparent 2px, rgba(255,255,255,0.1) 2px, rgba(255,255,255,0.1) 4px)",
                 borderRadius: "lg",
                 pointerEvents: "none",
               }}
-              _hover={{
-                transform: "rotate(0.5deg) translateY(-2px)",
-                transition: "all 0.3s ease",
-              }}
             >
-              <Flex direction="column" gap={4} align={{ base: "center", md: "flex-start" }}>
+              <Flex
+                direction="column"
+                gap={4}
+                align={{ base: "center", md: "flex-start" }}
+              >
                 <Text
                   fontSize="sm"
                   fontWeight="semibold"
@@ -194,7 +192,11 @@ export function Footer({
                 >
                   Quick Links
                 </Text>
-                <Flex direction="column" gap={2} align={{ base: "center", md: "flex-start" }}>
+                <Flex
+                  direction="column"
+                  gap={2}
+                  align={{ base: "center", md: "flex-start" }}
+                >
                   {footerLinks.map((link) => (
                     <Link
                       key={link.name}
@@ -203,13 +205,7 @@ export function Footer({
                       fontSize="sm"
                       color="gray.700"
                       fontWeight="medium"
-                      _hover={{
-                        color: "gray.900",
-                        textDecoration: "none",
-                        transform: "translateX(2px)",
-                        transition: "all 0.2s ease-in-out",
-                        textShadow: "0 1px 3px rgba(0,0,0,0.2)",
-                      }}
+                      textDecoration="none"
                     >
                       {link.name}
                     </Link>
@@ -233,16 +229,17 @@ export function Footer({
                 left: 0,
                 right: 0,
                 bottom: 0,
-                background: "repeating-linear-gradient(90deg, transparent, transparent 3px, rgba(255,255,255,0.1) 3px, rgba(255,255,255,0.1) 6px)",
+                background:
+                  "repeating-linear-gradient(90deg, transparent, transparent 3px, rgba(255,255,255,0.1) 3px, rgba(255,255,255,0.1) 6px)",
                 borderRadius: "lg",
                 pointerEvents: "none",
               }}
-              _hover={{
-                transform: "rotate(-0.5deg) translateY(-2px)",
-                transition: "all 0.3s ease",
-              }}
             >
-              <Flex direction="column" gap={4} align={{ base: "center", md: "flex-start" }}>
+              <Flex
+                direction="column"
+                gap={4}
+                align={{ base: "center", md: "flex-start" }}
+              >
                 <Text
                   fontSize="sm"
                   fontWeight="semibold"
@@ -259,11 +256,11 @@ export function Footer({
                       key={social.name}
                       href={social.href}
                       target={social.name !== "Email" ? "_blank" : undefined}
-                      rel={social.name !== "Email" ? "noopener noreferrer" : undefined}
-                      _hover={{
-                        transform: "translateY(-3px) rotate(5deg)",
-                        transition: "all 0.2s ease-in-out",
-                      }}
+                      rel={
+                        social.name !== "Email"
+                          ? "noopener noreferrer"
+                          : undefined
+                      }
                     >
                       <IconButton
                         aria-label={social.name}
@@ -273,11 +270,6 @@ export function Footer({
                         bg="rgba(255, 255, 255, 0.3)"
                         borderRadius="full"
                         boxShadow="0 2px 4px rgba(0, 0, 0, 0.1)"
-                        _hover={{
-                          color: "gray.900",
-                          bg: "rgba(255, 255, 255, 0.5)",
-                          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-                        }}
                       >
                         <social.icon />
                       </IconButton>
@@ -291,7 +283,6 @@ export function Footer({
           {/* Copyright Section - Paper Tape Look */}
           <Box
             bg="rgba(255, 255, 255, 0.8)"
-            mx={-4}
             px={8}
             py={4}
             position="relative"
@@ -302,7 +293,8 @@ export function Footer({
               right: "20px",
               top: 0,
               bottom: 0,
-              background: "repeating-linear-gradient(0deg, transparent, transparent 8px, rgba(0,0,0,0.05) 8px, rgba(0,0,0,0.05) 9px)",
+              background:
+                "repeating-linear-gradient(0deg, transparent, transparent 8px, rgba(0,0,0,0.05) 8px, rgba(0,0,0,0.05) 9px)",
               borderRadius: "sm",
             }}
             _after={{
@@ -325,10 +317,20 @@ export function Footer({
               position="relative"
               zIndex={1}
             >
-              <Text fontSize="sm" color="gray.600" textAlign="center" fontWeight="medium">
+              <Text
+                fontSize="sm"
+                color="gray.600"
+                textAlign="center"
+                fontWeight="medium"
+              >
                 © {year} {brandName}. All rights reserved.
               </Text>
-              <Text fontSize="sm" color="gray.600" textAlign="center" fontWeight="medium">
+              <Text
+                fontSize="sm"
+                color="gray.600"
+                textAlign="center"
+                fontWeight="medium"
+              >
                 Built with ❤️ using Next.js & Chakra UI
               </Text>
             </Flex>
@@ -337,4 +339,4 @@ export function Footer({
       </Container>
     </Box>
   );
-} 
+}

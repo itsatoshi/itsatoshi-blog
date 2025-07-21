@@ -13,7 +13,7 @@ export default function Home() {
       <Box flex="1">
         <Container maxW="6xl" py={8} mx="auto">
           <Heading size="4xl">@itsatoshi</Heading>
-          <AvatarSticker width="100px" height="100px" imageSizes="100px" />
+          <AvatarSticker width="100px" height="100px" imageSizes="100px" rotation="1deg" />
           <Text>Welcome to my site!</Text>
         </Container>
       </Box>
